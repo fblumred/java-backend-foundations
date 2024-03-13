@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.Instant;
+import java.sql.Date;
 
 @Entity
 @Table(name = "TASK_ITEM")
@@ -26,7 +26,7 @@ public class TaskItemEntity {
     private Boolean completed;
     
     @Column
-    private Instant deadline;
+    private Date deadline;
     
     @ManyToOne(fetch = FetchType.LAZY)
     private TaskListEntity taskList;
