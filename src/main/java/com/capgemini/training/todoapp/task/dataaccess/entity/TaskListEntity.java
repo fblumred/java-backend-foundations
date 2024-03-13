@@ -6,6 +6,8 @@ import lombok.Setter;
 
 import java.util.List;
 
+@NamedQuery(name = "TaskListEntity.findWithoutAnyTaskItem",
+            query = "SELECT task FROM TaskListEntity task WHERE task.taskItems IS EMPTY ")
 @Entity
 @Table(name = "TASK_LIST")
 @Getter
